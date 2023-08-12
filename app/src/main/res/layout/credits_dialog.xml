@@ -1,0 +1,41 @@
+<LinearLayout
+xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:orientation="vertical"
+android:padding="16dp">
+
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="Credits"
+    android:textSize="20sp"
+    android:textStyle="bold"
+    android:gravity="center"
+    android:padding="8dp" />
+
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="Developed/Coded/Debugged by: \n Armaan Nakhuda B-02 \n X(name appears only if the person helps) \n Y(name appears only if the person helps) \n\n Special credit for helping:\n Samay Pandey"
+    android:textSize="16sp"
+    android:gravity="center"
+    android:padding="8dp" />
+
+<Space
+    android:layout_width="match_parent"
+    android:layout_height="16dp" /> <!-- Small gap -->
+
+    <ImageButton
+        android:id="@+id/logoButton"
+        android:layout_width="20mm"
+        android:layout_height="20mm"
+        android:src="@drawable/logo"
+        android:contentDescription="KC Logo"
+        android:background="@null"
+        android:layout_gravity="center"
+        android:padding="8dp"
+        android:scaleType="fitCenter"
+         /> <!-- Clickable logo button -->
+
+</LinearLayout>
