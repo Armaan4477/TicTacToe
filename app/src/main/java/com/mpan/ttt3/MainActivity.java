@@ -20,6 +20,7 @@ import java.util.Random;
 import com.airbnb.lottie.LottieAnimationView;
 
 
+/** @noinspection ALL*/
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     private Button[][] buttons = new Button[3][3];
@@ -37,6 +38,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private boolean isGameWinAnimationPlaying = false;
     private boolean isPlayer1Starting = true;
     private boolean isOriginalPlayer1Starting = true;
+    private boolean isEasyMode = false;
+    private boolean isHardDifficulty = false;
 
 
 
@@ -172,21 +175,22 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             v.setBackgroundColor(Color.RED);
             textViewPlayer1.setBackgroundColor(Color.parseColor("#FF0000"));
             textViewPlayer2.setBackgroundColor(Color.parseColor("#0000FF"));
-
         } else if (isTwoPlayersMode) {
             ((Button) v).setText("O");
             v.setBackgroundColor(Color.BLUE);
             textViewPlayer1.setBackgroundColor(Color.parseColor("#FF0000"));
             textViewPlayer2.setBackgroundColor(Color.parseColor("#0000FF"));
-
         } else {
-
             v.setEnabled(false);
             new Handler(Looper.getMainLooper()).postDelayed(new Runnable() {
                 @Override
                 public void run() {
                     // AI move
-                    computerMove();
+                    if (isHardDifficulty) {
+                        computerMoveHard();
+                    } else {
+                        computerMoveEasy();
+                    }
                     v.setEnabled(true);
                 }
             }, 1000); // Delay for AI move after human move
@@ -207,14 +211,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         } else {
             player1Turn = !player1Turn;
 
-
             if (!player1Turn && !isTwoPlayersMode) {
-                computerMove();
+                if (isHardDifficulty) {
+                    computerMoveHard();
+                } else {
+                    computerMoveEasy();
+                }
             }
         }
-
     }
-
 
     private boolean checkForWin() {
 
@@ -457,7 +462,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             player2Points = savedInstanceState.getInt("player2Points");
             player1Turn = savedInstanceState.getBoolean("player1Turn");
         }
-    private void computerMove() {
+    private void computerMoveEasy() {
 
         if (!player1Turn && !isTwoPlayersMode) {
             for (int i = 0; i < 3; i++) {
@@ -491,6 +496,69 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 }
             }
 
+            Random random = new Random();
+            int row, col;
+            do {
+                row = random.nextInt(3);
+                col = random.nextInt(3);
+            } while (!buttons[row][col].getText().toString().equals(""));
+
+            buttons[row][col].setText("O");
+            buttons[row][col].setBackgroundColor(Color.BLUE);
+
+            roundCount++;
+
+            if (checkForWin()) {
+                player2Wins();
+            } else if (roundCount == 9) {
+                draw();
+            } else {
+                player1Turn = !player1Turn;
+            }
+        }
+    }
+    private void computerMoveHard() {
+        if (!player1Turn && !isTwoPlayersMode) {
+            // Check for winning moves
+            for (int i = 0; i < 3; i++) {
+                for (int j = 0; j < 3; j++) {
+                    if (buttons[i][j].getText().toString().equals("")) {
+                        // Simulate player's move to check for win
+                        buttons[i][j].setText("O");
+                        if (checkForWin()) {
+                            buttons[i][j].setText("");
+                            buttons[i][j].setText("O");
+                            buttons[i][j].setBackgroundColor(Color.BLUE);
+                            roundCount++;
+                            player2Wins();
+                            return;
+                        } else {
+                            buttons[i][j].setText("");
+                        }
+                    }
+                }
+            }
+
+            // Check for blocking moves
+            for (int i = 0; i < 3; i++) {
+                for (int j = 0; j < 3; j++) {
+                    if (buttons[i][j].getText().toString().equals("")) {
+                        // Simulate opponent's move to check for potential win
+                        buttons[i][j].setText("X");
+                        if (checkForWin()) {
+                            buttons[i][j].setText("O");
+                            buttons[i][j].setBackgroundColor(Color.BLUE);
+                            roundCount++;
+                            player1Turn = !player1Turn;
+                            return;
+                        } else {
+                            buttons[i][j].setText("");
+                        }
+                    }
+                }
+            }
+
+            // Choose a random available move
             Random random = new Random();
             int row, col;
             do {

@@ -1,6 +1,7 @@
 <LinearLayout
 xmlns:android="http://schemas.android.com/apk/res/android"
-android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
 android:layout_height="wrap_content"
 android:orientation="vertical"
 android:padding="16dp">
@@ -12,7 +13,8 @@ android:padding="16dp">
     android:textSize="20sp"
     android:textStyle="bold"
     android:gravity="center"
-    android:padding="8dp" />
+    android:padding="8dp"
+    tools:ignore="HardcodedText" />
 
 <TextView
     android:layout_width="match_parent"
@@ -20,7 +22,8 @@ android:padding="16dp">
     android:text="Developed/Coded/Debugged by: \n Armaan Nakhuda B-02 \n X(name appears only if the person helps) \n Y(name appears only if the person helps) \n\n Special credit for helping:\n Samay Pandey"
     android:textSize="16sp"
     android:gravity="center"
-    android:padding="8dp" />
+    android:padding="8dp"
+    tools:ignore="HardcodedText" />
 
 <Space
     android:layout_width="match_parent"
@@ -36,6 +39,6 @@ android:padding="16dp">
         android:layout_gravity="center"
         android:padding="8dp"
         android:scaleType="fitCenter"
-         /> <!-- Clickable logo button -->
+        tools:ignore="HardcodedText,InOrMmUsage" /> <!-- Clickable logo button -->
 
 </LinearLayout>

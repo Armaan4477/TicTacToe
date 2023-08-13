@@ -10,6 +10,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ToggleButton;
 
+/** @noinspection ALL */
 public class GameOptionsActivity extends Activity {
 
     private ToggleButton toggleMode1;
@@ -40,6 +41,7 @@ public class GameOptionsActivity extends Activity {
                 intent.putExtra("player1Name", player1Name);
                 intent.putExtra("player2Name", player2Name);
                 intent.putExtra("isTwoPlayersMode", toggleMode1.isChecked());
+                intent.putExtra("isHardDifficulty", toggleMode2.isChecked());
                 startActivity(intent);
                 finish();
             }
@@ -55,12 +57,15 @@ public class GameOptionsActivity extends Activity {
         toggleMode1.setOnCheckedChangeListener((buttonView, isChecked) -> {
             if (isChecked) {
                 toggleMode2.setVisibility(View.GONE);
+                editTextPlayer2.setVisibility(View.VISIBLE);
             } else {
                 toggleMode2.setVisibility(View.VISIBLE);
+                editTextPlayer2.setVisibility(View.GONE);
             }
         });
     }
 
+    /** @noinspection DataFlowIssue*/
     private void showCredits() {
         Dialog creditsDialog = new Dialog(this);
         creditsDialog.setContentView(R.layout.credits_dialog);

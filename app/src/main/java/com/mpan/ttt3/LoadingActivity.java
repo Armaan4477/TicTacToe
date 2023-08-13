@@ -11,6 +11,7 @@ import android.widget.ProgressBar;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+/** @noinspection ALL*/
 public class LoadingActivity extends AppCompatActivity {
 
     private static final long DELAY_DURATION = 2500;
