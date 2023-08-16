@@ -193,7 +193,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     }
                     v.setEnabled(true);
                 }
-            }, 1000); // Delay for AI move after human move
+            }, 1000);
             textViewPlayer1.setBackgroundColor(Color.parseColor("#FF0000"));
             textViewPlayer2.setBackgroundColor(Color.parseColor("#0000FF"));
         }
@@ -309,14 +309,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                         sadfaceAnimation.setVisibility(View.GONE);
                     }
                 });
-                // In single-player mode, show "Bot wins the round!" toast
                 if (player2Points == 4) {
                     playerWinsGame(2);
                 } else {
                     Toast.makeText(this, "Bot wins the round!", Toast.LENGTH_SHORT).show();
                 }
             } else {
-                // In two-players mode, show "Player 2 wins the round!" toast
                 LottieAnimationView thumbsUpAnimation = findViewById(R.id.lottie_thumbs_up);
                 thumbsUpAnimation.bringToFront();
                 thumbsUpAnimation.setVisibility(View.VISIBLE);
@@ -379,7 +377,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         roundCount = 0;
 
-        // Switch the starting player for the next round
         player1Turn = isPlayer1Starting;
 
         updatePlayerNamesAndPoints();
@@ -390,7 +387,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         player1Points = 0;
         player2Points = 0;
         /*player1Turn=true;*/
-        // Reset the starting player to the original setting
         isPlayer1Starting = isOriginalPlayer1Starting;
 
         updatePointsText();
@@ -468,7 +464,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             for (int i = 0; i < 3; i++) {
                 for (int j = 0; j < 3; j++) {
                     if (buttons[i][j].getText().toString().equals("")) {
-                        // Simulate player's move to check for win
                         buttons[i][j].setText("O");
                         if (checkForWin()) {
                             buttons[i][j].setText("");
@@ -519,11 +514,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
     private void computerMoveHard() {
         if (!player1Turn && !isTwoPlayersMode) {
-            // Check for winning moves
             for (int i = 0; i < 3; i++) {
                 for (int j = 0; j < 3; j++) {
                     if (buttons[i][j].getText().toString().equals("")) {
-                        // Simulate player's move to check for win
                         buttons[i][j].setText("O");
                         if (checkForWin()) {
                             buttons[i][j].setText("");
@@ -539,11 +532,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 }
             }
 
-            // Check for blocking moves
             for (int i = 0; i < 3; i++) {
                 for (int j = 0; j < 3; j++) {
                     if (buttons[i][j].getText().toString().equals("")) {
-                        // Simulate opponent's move to check for potential win
                         buttons[i][j].setText("X");
                         if (checkForWin()) {
                             buttons[i][j].setText("O");
@@ -558,7 +549,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 }
             }
 
-            // Choose a random available move
             Random random = new Random();
             int row, col;
             do {

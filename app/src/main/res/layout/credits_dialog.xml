@@ -19,7 +19,7 @@ android:padding="16dp">
 <TextView
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:text="Developed/Coded/Debugged by: \n Armaan Nakhuda B-02 \n Sushant Navle B-05 \n Y(name appears only if the person helps) \n\n Special credit for helping:\n Samay Pandey"
+    android:text="Developed/Coded/Debugged by: \n Armaan Nakhuda B-02 \n Sushant Navle B-05 \n Hritvik Saigaonkar B-19 \n\n Special credit for helping:\n Samay Pandey"
     android:textSize="16sp"
     android:gravity="center"
     android:padding="8dp"
@@ -27,7 +27,7 @@ android:padding="16dp">
 
 <Space
     android:layout_width="match_parent"
-    android:layout_height="16dp" /> <!-- Small gap -->
+    android:layout_height="16dp" />
 
     <ImageButton
         android:id="@+id/logoButton"
@@ -39,6 +39,6 @@ android:padding="16dp">
         android:layout_gravity="center"
         android:padding="8dp"
         android:scaleType="fitCenter"
-        tools:ignore="HardcodedText,InOrMmUsage" /> <!-- Clickable logo button -->
+        tools:ignore="HardcodedText,InOrMmUsage" />
 
 </LinearLayout>
