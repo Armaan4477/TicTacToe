@@ -8,11 +8,11 @@ android {
 
     defaultConfig {
         applicationId = "com.mpan.ttt3"
-        minSdk = 30
+        minSdk = 31
         //noinspection EditedTargetSdkVersion
         targetSdk = 34
         versionCode = 1
-        versionName = "9.0"
+        versionName = "9.1"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
