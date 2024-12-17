@@ -9,7 +9,7 @@
         android:label="TicTacToe"
         android:supportsRtl="true"
         android:theme="@style/Theme.TTT3"
-        tools:targetApi="34">
+        tools:targetApi="35">
 
         <activity
             android:name=".LoadingActivity"
