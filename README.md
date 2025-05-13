@@ -1,47 +1,124 @@
-# Tic Tac Toe
+# Tic Tac Toe Android App
 
-Tic Tac Toe, often referred to as Noughts and Crosses, is a timeless classic among board games. Its simplicity, yet potential for strategic depth, has made it a favorite pastime for people of all ages around the world. This game, played on a 3x3 grid, requires two players who take turns marking the grid with their respective symbols, typically "X" and "O." The objective is straightforward: be the first to complete a row, column, or diagonal with your symbols.
+A modern implementation of the classic Tic Tac Toe game for Android devices, featuring both single-player and two-player gameplay modes.
+
+Often referred to as Noughts and Crosses, is a timeless classic among board games. Its simplicity, yet potential for strategic depth, has made it a favorite pastime for people of all ages around the world. This game, played on a 3x3 grid, requires two players who take turns marking the grid with their respective symbols, typically "X" and "O." The objective is straightforward: be the first to complete a row, column, or diagonal with your symbols.
+
+![Tic Tac Toe Logo](app/src/main/res/mipmap-xxxhdpi/ic_launcher_foreground.webp)
 
 ## Features
 
-- **Compete with AI:** Test your skills against AI opponents that adapt to your gameplay.
-- **Offline Multiplayer:** Play with friends offline in two-player mode for a classic gaming experience.
+- **Multiple Game Modes**: Play against another player or challenge the computer AI
+- **Difficulty Levels**: Choose between easy and hard AI difficulty
+- **Customizable Player Names**: Personalize your gaming experience
+- **Score Tracking**: Keep track of wins for each player
+- **Best-of-7 Format**: First player to reach 4 points wins the game
+- **Beautiful Animations**: Victory and gameplay animations using Lottie
+- **Pause Functionality**: Pause the game anytime and resume later
+- **Modern UI Design**: Clean, intuitive interface
 
-## Introduction
+## Screenshots
 
-While Tic Tac Toe might seem deceptively simple, it offers a captivating blend of tactics, strategy, and suspense. Players must anticipate their opponent's moves while devising their own winning strategies. This intriguing mix of challenge and accessibility has kept Tic Tac Toe popular for generations.
-
-## Digital Adaptation
-
-In this digital age, Tic Tac Toe has found a new home in the world of computer games. With the advent of technology, it has become easier than ever to enjoy this classic game in various formats, from traditional pen-and-paper to computerized versions with AI opponents.
-
-## Project Details
-
-This project aims to capture the essence of the game's appeal, offering a user-friendly interface and optional AI opponents that adapt to your skill level. Whether you are a seasoned strategist or a casual player looking for a quick game, our digital Tic Tac Toe promises an engaging and enjoyable experience for players of all backgrounds.
+<table>
+  <tr>
+    <td><img src="screenshots/loading_screen.jpg" alt="Loading Screen" width="200"/></td>
+    <td><img src="screenshots/game_options.jpg" alt="Game Options" width="200"/></td>
+    <td><img src="screenshots/gameplay.jpg" alt="Gameplay" width="200"/></td>
+  </tr>
+  <tr>
+    <td><img src="screenshots/win_animation.jpg" alt="Win Animation" width="200"/></td>
+    <td><img src="screenshots/pause_menu.jpg" alt="Pause Menu" width="200"/></td>
+    <td><img src="screenshots/credits.jpg" alt="Credits Screen" width="200"/></td>
+  </tr>
+</table>
 
 ## Technologies Used
 
-- Android Studio: Used for the development of the Tic Tac Toe game application.
-
-## How to Play
-
-To start playing Tic Tac Toe:
-1. Run the app.
-2. Enter the game mode: 
-   - For one player, enter your name and choose the difficulty level.
-   - For two players, enter the names of both players.
-3. Start the game and enjoy!
+- Java
+- Android SDK
+- Lottie Animation Library
+- Android Architecture Components
+- JUnit for testing
 
 ## Installation
 
-To install the Tic Tac Toe game application:
-1. Go to the [Releases](https://github.com/Armaan4477/TicTacToe/releases) section of this repository.
-2. Download the APK file.
-3. Give all required permissions on your device.
-4. Run the APK and enjoy playing!
+### Requirements
+- Android 12 (API level 31) or higher
+- Approximately 20MB of free space
 
-Join us in this journey through the virtual Tic Tac Toe grid, where simple moves can lead to exhilarating victories and challenging opponents await your every decision. Discover the joy of this ageless game as we bring it to life in a new and exciting form.
+### Installation Options
 
-For any issues found or feedback, please open an issue on GitHub or contact us at armaannakhuda2022@kccemsr.edu.in.
+#### Option 1: Download from Release
+1. Go to the [Releases](https://github.com/Armaan4477/TicTacToe/releases) section
+2. Download the latest APK file
+3. On your Android device, allow installation from unknown sources in settings
+4. Open the downloaded APK file to install
 
-Enjoy the game!
+#### Option 2: Clone and Build
+1. Clone the repository:
+```
+git clone https://github.com/Armaan4477/TicTacToe.git
+```
+2. Open the project in Android Studio
+3. Build the project using Gradle
+4. Run on an emulator or physical device
+
+## How to Play
+
+1. **Launch the App**: Open the app and wait for the loading screen
+2. **Configure Game Settings**:
+   - Choose between Single Player or Two Player mode
+   - Enter player names
+   - If playing Single Player, select difficulty level (Easy/Hard)
+3. **Gameplay**:
+   - Players take turns placing X and O on the 3×3 grid
+   - Player 1 (X) always goes first
+   - The first player to get 3 of their marks in a row (horizontally, vertically, or diagonally) wins the round
+   - First player to win 4 rounds wins the game
+4. **Controls**:
+   - Tap on an empty cell to make your move
+   - Use the pause button to access the pause menu
+   - From the pause menu, you can resume, reset the game, start a new game, or view credits
+
+## AI Difficulty Levels
+
+- **Easy**: AI makes random moves and only blocks obvious winning moves
+- **Hard**: AI strategically plays to win and always blocks your winning moves
+
+## Development
+
+### Project Structure
+- `MainActivity.java`: Main game logic
+- `GameOptionsActivity.java`: Game configuration screen
+- `LoadingActivity.java`: Initial loading screen
+- XML layouts in `res/layout/` directory
+- Animations in `res/raw/` directory
+
+### Build Configuration
+- Built with Gradle
+- Target SDK: 35
+- Min SDK: 31 (Android 12)
+- Version: 9.4
+
+## Latest Release
+
+Version 9.4 includes:
+- Performance optimizations
+- UI improvements
+- Bug fixes for game logic
+- Enhanced animations
+
+Download the latest APK from the [Releases](https://github.com/Armaan4477/TicTacToe/releases) page.
+
+## Credits
+
+- Developed by: Armaan N
+- Lottie Animations by Airbnb
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## Contact
+
+For questions, feedback, or issues, please [open an issue](https://github.com/Armaan4477/TicTacToe/issues) on GitHub.
