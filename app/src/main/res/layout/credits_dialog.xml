@@ -19,7 +19,7 @@ android:padding="16dp">
 <TextView
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:text="Developed/Coded/Debugged by: \n Armaan Nakhuda B-02 \n\n Special credit for helping:\n Samay Pandey"
+    android:text="Developed by: \n Armaan N \n\n Special credit for helping:\n Samay P"
     android:textSize="16sp"
     android:gravity="center"
     android:padding="8dp"

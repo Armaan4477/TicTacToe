@@ -44,8 +44,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 
 
-    public void openKCWebsite(View view) {
-        Uri uri = Uri.parse("https://kccemsr.edu.in/");
+    public void openWebsite(View view) {
+        Uri uri = Uri.parse("https://armaan44.is-a.dev/");
         Intent intent = new Intent(Intent.ACTION_VIEW, uri);
         startActivity(intent);
     }
@@ -156,7 +156,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         logoButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                openKCWebsite(v);
+                openWebsite(v);
             }
         });
 
