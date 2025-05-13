@@ -12,7 +12,7 @@ android {
         //noinspection EditedTargetSdkVersion
         targetSdk = 35
         versionCode = 1
-        versionName = "9.4.2"
+        versionName = "9.5"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }

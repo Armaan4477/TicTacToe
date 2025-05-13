@@ -172,15 +172,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         if (player1Turn) {
             ((Button) v).setText("X");
-            v.setBackgroundColor(Color.RED);
+            ((Button) v).setBackgroundColor(Color.RED);
             textViewPlayer1.setBackgroundColor(Color.parseColor("#FF0000"));
             textViewPlayer2.setBackgroundColor(Color.parseColor("#0000FF"));
         } else if (isTwoPlayersMode) {
             ((Button) v).setText("O");
-            v.setBackgroundColor(Color.BLUE);
+            ((Button) v).setBackgroundColor(Color.BLUE);
             textViewPlayer1.setBackgroundColor(Color.parseColor("#FF0000"));
             textViewPlayer2.setBackgroundColor(Color.parseColor("#0000FF"));
         } else {
+            ((Button) v).setText("X");
+            ((Button) v).setBackgroundColor(Color.RED);
             v.setEnabled(false);
             new Handler(Looper.getMainLooper()).postDelayed(new Runnable() {
                 @Override

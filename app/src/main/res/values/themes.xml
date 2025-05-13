@@ -6,4 +6,32 @@
     </style>
 
     <style name="Theme.TTT3" parent="Base.Theme.TTT3" />
+
+    <!-- Base application theme -->
+    <style name="Theme.TicTacToe" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color -->
+        <item name="colorPrimary">@color/orange</item>
+        <item name="colorPrimaryVariant">@color/black</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color -->
+        <item name="colorSecondary">@color/red</item>
+        <item name="colorSecondaryVariant">@color/blue</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color -->
+        <item name="android:statusBarColor">@color/black</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <!-- Other customizations -->
+        <item name="android:navigationBarColor">@color/black</item>
+        <!-- Don't override the button style here -->
+    </style>
+
+    <!-- Custom style for game buttons that allows background color changes -->
+    <style name="GameButtonStyle" parent="Widget.MaterialComponents.Button">
+        <item name="android:backgroundTint">@null</item>
+        <item name="backgroundTint">@null</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_margin">4dp</item>
+        <item name="android:textSize">40sp</item>
+    </style>
 </resources>
