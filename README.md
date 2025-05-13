@@ -21,14 +21,40 @@ Often referred to as Noughts and Crosses, is a timeless classic among board game
 
 <table>
   <tr>
-    <td><img src="screenshots/loading_screen.jpg" alt="Loading Screen" width="200"/></td>
-    <td><img src="screenshots/game_options.jpg" alt="Game Options" width="200"/></td>
-    <td><img src="screenshots/gameplay.jpg" alt="Gameplay" width="200"/></td>
+    <td>
+      <img src="screenshots/loading_screen.png" alt="Loading Screen" width="200"/>
+      <p align="center">Loading Screen</p>
+    </td>
+    <td>
+      <img src="screenshots/start_screen_1player.png" alt="Game Options- 1 player" width="200"/>
+      <p align="center">Single Player Setup</p>
+    </td>
+    <td>
+      <img src="screenshots/start_screen_2players.png" alt="Game Options- 2 player" width="200">
+      <p align="center">Two Player Setup</p>
+    </td>
+    <td>
+      <img src="screenshots/in_game.png" alt="Gameplay" width="200"/>
+      <p align="center">Gameplay</p>
+    </td>
   </tr>
   <tr>
-    <td><img src="screenshots/win_animation.jpg" alt="Win Animation" width="200"/></td>
-    <td><img src="screenshots/pause_menu.jpg" alt="Pause Menu" width="200"/></td>
-    <td><img src="screenshots/credits.jpg" alt="Credits Screen" width="200"/></td>
+    <td>
+      <img src="screenshots/player_wins.png" alt="Player Win Animation" width="200"/>
+      <p align="center">Player Win Animation</p>
+    </td>
+    <td>
+      <img src="screenshots/bot_wins.png" alt="Bot Win Animation" width="200"/>
+      <p align="center">Bot Win Animation</p>
+    </td>
+    <td>
+      <img src="screenshots/pause_menu.png" alt="Pause Menu" width="200"/>
+      <p align="center">Pause Menu</p>
+    </td>
+    <td>
+      <img src="screenshots/credits.png" alt="Credits Screen" width="200"/>
+      <p align="center">Credits Screen</p>
+    </td>
   </tr>
 </table>
 
