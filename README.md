@@ -4,7 +4,7 @@ A modern implementation of the classic Tic Tac Toe game for Android devices, fea
 
 Often referred to as Noughts and Crosses, is a timeless classic among board games. Its simplicity, yet potential for strategic depth, has made it a favorite pastime for people of all ages around the world. This game, played on a 3x3 grid, requires two players who take turns marking the grid with their respective symbols, typically "X" and "O." The objective is straightforward: be the first to complete a row, column, or diagonal with your symbols.
 
-This repository is a version of the [Noughts&Crosses] (https://github.com/Armaan4477/Noughts-and-Crosses) Game with lottie animations instead of pre-rendered animations which was a requirement for the project submission
+This repository is a version of the [Noughts&Crosses](https://github.com/Armaan4477/Noughts-and-Crosses) Game with lottie animations instead of pre-rendered animations which was a requirement for the project submission
 
 ![Tic Tac Toe Logo](app/src/main/res/mipmap-xxxhdpi/ic_launcher_foreground.webp)
 
